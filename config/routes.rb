@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'links/new'
+
+  post 'links/create'
+
+  
+  get 'links/:key' => "links#show"
+
+  root 'links#new'
+
+  get ':key' => "links#move"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
